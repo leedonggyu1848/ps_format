@@ -1,5 +1,4 @@
 #include <iostream>
-#define DEBUG //테스트용 flag
 using namespace std;
 
 void getInput() {
@@ -13,6 +12,7 @@ void solve() {
 #ifdef DEBUG
 // 테스트용
 int main() {
+  printf("testing");
   int t;
   cin >> t;
   while(t--){
