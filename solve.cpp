@@ -12,7 +12,6 @@ void solve() {
 #ifdef DEBUG
 // 테스트용
 int main() {
-  printf("testing");
   int t;
   cin >> t;
   while(t--){
