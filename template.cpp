@@ -9,9 +9,11 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void getInput() {
+  /* 값 받는 코드*/
 }
 
 void solve() {
+  /*문제 푸는 코드*/
 }
 
 #ifdef DEBUG
