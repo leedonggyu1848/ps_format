@@ -14,7 +14,7 @@ output_data_list = example[1::2]
 
 with open("answer.txt", 'w') as answer:
     with open("test.txt", 'w') as test:
-        test.write(str(len(input_data_list)) + '/')
+        test.write(str(len(input_data_list)) + '\n')
         for input_data, output_data in zip(input_data_list, output_data_list):
             answer.write(output_data.text)
             test.write(input_data.text)
