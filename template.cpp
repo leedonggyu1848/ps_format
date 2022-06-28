@@ -3,6 +3,7 @@
 using namespace std;
 
 #define FOR(N) for(int i=0; i<(N); ++i)
+#define FOR2(N, M) for (int i=0; i<(N); ++i) for (int j=0; j<(M); ++j)
 #define INF 987654321
 
 typedef vector<int> vi;
