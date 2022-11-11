@@ -17,7 +17,7 @@ void solve() {
   /*문제 푸는 코드*/
 }
 
-#ifndef DEBUG
+#ifdef BOJ
 // 제출용
 int main() {
   ios_base::sync_with_stdio(false);
@@ -29,7 +29,7 @@ int main() {
 }
 #endif
 
-#ifdef DEBUG
+#ifndef BOJ
 // 테스트용
 int main() {
   int t;
