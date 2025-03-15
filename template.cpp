@@ -9,12 +9,17 @@ using namespace std;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
+  /** 값 받는 코드입니다.
+   * 받는 값은 전역변수로 설정해야합니다.
+   */
 void getInput() {
-  /* 값 받는 코드*/
 }
 
+/**
+ * 문제를 푸는 코드입니다.
+ * 값을 출력하는 것까지 포함합니다.
+ */
 void solve() {
-  /*문제 푸는 코드*/
 }
 
 #ifdef BOJ
