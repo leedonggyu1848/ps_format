@@ -5,8 +5,9 @@ out_file="${current_dir}/out"
 test_file="${current_dir}/test.txt"
 answer_file="${current_dir}/answer.txt"
 rst_file="${current_dir}/rst.txt"
+solve_cpp="${current_dir}/solve.cpp"
 
-g++ -std=c++14 -g -W -Wall -o out solve.cpp
+g++ -std=c++14 -g -W -Wall -o $out_file $solve_cpp
 if [ $? -ne 0 ]; then
   exit 1
 fi
@@ -38,3 +39,9 @@ if [ $? -ne 0 ]; then
 fi
 
 diff -c $rst_file $answer_file
+
+if [ $? -eq 0 ]; then
+  echo "모든 테스트 케이스들을 통과했습니다!"
+else
+  echo "통과하지 못한 테스트 케이스가 존재합니다.."
+fi
