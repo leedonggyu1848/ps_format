@@ -17,7 +17,7 @@ for module in "${MODULES[@]}"; do
           pip3 install "$module"
         else
           echo "'$module'을(를) 설치하지 않아 종료됩니다."
-          exit
+          exit 1
         fi
     fi
 done

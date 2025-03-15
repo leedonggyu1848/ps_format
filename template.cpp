@@ -25,10 +25,10 @@ using namespace std;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
-  /** 값 받는 코드입니다.
-   * 받는 값은 전역변수로 설정해야합니다.
-   */
-void getInput() {
+/** 값 받는 코드입니다.
+ * 받는 값은 전역변수로 설정해야합니다.
+ */
+void get_input() {
 }
 
 /**
@@ -38,27 +38,10 @@ void getInput() {
 void solve() {
 }
 
-#ifdef BOJ
-// 제출용
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
-  getInput();
+  ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+
+  get_input();
   solve();
   return 0;
 }
-#endif
-
-#ifndef BOJ
-// 테스트용
-int main() {
-  int t;
-  cin >> t;
-  while(t--){
-    getInput();
-    solve();
-  }
-  return 0;
-}
-#endif
