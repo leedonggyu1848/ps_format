@@ -1,4 +1,20 @@
-#include <bits/stdc++.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <algorithm>
+#include <complex>
+#include <deque>
+#include <iostream>
+#include <iterator>
+#include <list>
+#include <map>
+#include <queue>
+#include <set>
+#include <stack>
+#include <string>
+#include <utility>
+#include <vector>
 
 using namespace std;
 
