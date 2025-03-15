@@ -1,5 +1,5 @@
-import requests
 import sys
+import requests
 from bs4 import BeautifulSoup
 
 if len(sys.argv) != 2:
@@ -9,7 +9,7 @@ if not sys.argv[1].isdigit():
     print('ERR: 문제 번호는 숫자로 입력해주세요.')
     sys.exit(1)
 
-problem = int(sys.argv[1])
+problem = sys.argv[1]
 
 user_agent = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"}
 url = "https://www.acmicpc.net/problem/"
