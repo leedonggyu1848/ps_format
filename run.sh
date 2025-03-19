@@ -24,10 +24,10 @@ for i in $(seq 1 $iterations); do
   lines=$(sed -n "${cur}p" $test_file)
   cur=$( expr $cur + 1 )
   end=$( expr $cur + $lines - 1 )
-    sed -n "${cur},${end}p" $test_file \
-      | $out_file \
-      | sed -e 's/[[:space:]]*$//' \
-      >> $rst_file
+  sed -n "${cur},${end}p" $test_file \
+    | $out_file \
+    | sed -e 's/[[:space:]]*$//' \
+    >> $rst_file
 
   tail -c 1 $rst_file \
   | grep -q '^$' || echo >> $rst_file
