@@ -20,13 +20,14 @@ using namespace std;
 
 #define FOR(N) for(int i=0; i<(N); ++i)
 #define FOR2(N, M) for (int i=0; i<(N); ++i) for (int j=0; j<(M); ++j)
-#define INF 987654321
+#define INF 0x7f7f7f7f
 
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void get_input() {
-/** 값 받는 함수입니다.
+/**
+ * 값 받는 함수입니다.
  * 받는 값은 전역변수로 설정해야합니다.
  */
 }
