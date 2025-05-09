@@ -29,3 +29,5 @@ if [ $? -ne 0 ]; then
 fi
 
 cp template.cpp solve.cpp
+touch solve.py
+
