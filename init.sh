@@ -29,5 +29,7 @@ if [ $? -ne 0 ]; then
 fi
 
 cp template.cpp solve.cpp
-echo -n > solve.py
+echo 'import sys
+input = sys.stdin.readline
+'> solve.py
 
