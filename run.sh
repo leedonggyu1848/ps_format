@@ -14,16 +14,16 @@ current_dir=$(dirname "$0")
 test_file="${current_dir}/test.txt"
 answer_file="${current_dir}/answer.txt"
 rst_file="${current_dir}/rst.txt"
-solve_cpp="${current_dir}/solve.cpp"
-solve_py="${current_dir}/solve.py"
 if [ $1 == 'cpp' ]; then
+  solve_file="${current_dir}/solve.cpp"
   out_file="${current_dir}/out"
 elif [ $1 == 'py' ]; then
-  out_file="python3 ${current_dir}/${solve_py}"
+  solve_file="${current_dir}/solve.py"
+  out_file="python3 ${solve_file}"
 fi
 
 if [ $1 == "cpp" ]; then
-  g++ -std=c++14 -g -W -Wall -o $out_file $solve_cpp
+  g++ -std=c++14 -g -W -Wall -o $out_file $solve_file
 elif [ $1 == "py" ]; then
   source "${current_dir}/clean/bin/activate"
 fi
@@ -62,6 +62,7 @@ diff -c $rst_file $answer_file
 
 if [ $? -eq 0 ]; then
   echo "모든 테스트 케이스들을 통과했습니다!"
+  cat ${solve_file} | pbcopy
 else
   echo "통과하지 못한 테스트 케이스가 존재합니다.."
 fi
