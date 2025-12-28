@@ -1,5 +1,25 @@
 #!/bin/bash
 
+copy_to_clipboard() {
+  local file=$1
+  if command -v pbcopy > /dev/null; then
+    # macOS
+    cat "${file}" | pbcopy
+  elif command -v xclip > /dev/null; then
+    # Linux (Ubuntu 등, xclip 설치 필요)
+    cat "${file}" | xclip -selection clipboard
+  elif command -v clip.exe > /dev/null; then
+    # Windows (WSL 환경)
+    cat "${file}" | clip.exe
+  elif command -v wl-copy > /dev/null; then
+    # Linux (Wayland 환경)
+    cat "${file}" | wl-copy
+  else
+    echo "오류: 클립보드 복사 도구를 찾을 수 없습니다. (xclip 등을 설치하세요)"
+    return 1
+  fi
+}
+
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <사용할 언어>"
     exit 1
@@ -62,7 +82,7 @@ diff -c $rst_file $answer_file
 
 if [ $? -eq 0 ]; then
   echo "모든 테스트 케이스들을 통과했습니다!"
-  cat ${solve_file} | pbcopy
+  copy_to_clipboard "${solve_file}"
 else
   echo "통과하지 못한 테스트 케이스가 존재합니다.."
 fi
